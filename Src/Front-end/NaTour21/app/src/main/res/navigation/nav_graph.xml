@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/effettuaAccessoFragment">
+
+    <fragment
+        android:id="@+id/effettuaAccessoFragment"
+        android:name="it.ingsw.natour21.ui.fragments.EffettuaAccessoFragment"
+        android:label=" "
+        tools:layout="@layout/fragment_effettua_accesso" >
+        <action
+            android:id="@+id/action_effettuaAccessoFragment_to_creaAccountFragment"
+            app:destination="@id/creaAccountFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left" />
+        <action
+            android:id="@+id/action_effettuaAccessoFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:popUpTo="@id/effettuaAccessoFragment"
+            app:popUpToInclusive="true"/>
+        <action
+            android:id="@+id/action_effettuaAccessoFragment_to_effettuaAccessoGoogleFragment"
+            app:destination="@id/effettuaAccessoGoogleFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/creaAccountFragment"
+        android:name="it.ingsw.natour21.ui.fragments.CreaAccountFragment"
+        android:label=" "
+        tools:layout="@layout/fragment_crea_account" >
+        <action
+            android:id="@+id/action_creaAccountFragment_to_effettuaAccessoFragment"
+            app:destination="@id/effettuaAccessoFragment"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:popUpTo="@id/effettuaAccessoFragment"
+            app:popUpToInclusive="true"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="it.ingsw.natour21.ui.fragments.HomeFragment"
+        android:label=" "
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_homeFragment_to_nuovoItinerarioFragment"
+            app:destination="@id/nuovoItinerarioFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_mieiItinerariFragment2"
+            app:destination="@id/mieiItinerariFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_dettagliItinerarioFragment"
+            app:destination="@id/dettagliItinerarioFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/effettuaAccessoGoogleFragment"
+        android:name="it.ingsw.natour21.ui.fragments.EffettuaAccessoGoogleFragment"
+        android:label=" "
+        tools:layout="@layout/fragment_effettua_accesso_google">
+        <action
+            android:id="@+id/action_effettuaAccessoGoogleFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:popUpTo="@id/effettuaAccessoFragment"
+            app:popUpToInclusive="true"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/dettagliItinerarioFragment"
+        android:name="it.ingsw.natour21.ui.fragments.DettagliItinerarioFragment"
+        android:label=" "
+        tools:layout="@layout/fragment_dettagli_itinerario"/>
+
+    <fragment
+        android:id="@+id/nuovoItinerarioFragment"
+        android:name="it.ingsw.natour21.ui.fragments.NuovoItinerarioFragment"
+        android:label=" "
+        tools:layout="@layout/fragment_nuovo_itinerario">
+        <action
+            android:id="@+id/action_nuovoItinerarioFragment_to_nuovoItinerarioMappaFragment"
+            app:destination="@id/nuovoItinerarioMappaFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/mieiItinerariFragment"
+        android:name="it.ingsw.natour21.ui.fragments.MieiItinerariFragment"
+        android:label=" "
+        tools:layout="@layout/fragment_miei_itinerari">
+        <action
+            android:id="@+id/action_mieiItinerariFragment_to_dettagliItinerarioFragment"
+            app:destination="@id/dettagliItinerarioFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/profiloFragment"
+        android:name="it.ingsw.natour21.ui.fragments.ProfiloFragment"
+        android:label=" "
+        tools:layout="@layout/fragment_profilo"/>
+
+    <fragment
+        android:id="@+id/nuovoItinerarioMappaFragment"
+        android:name="it.ingsw.natour21.ui.fragments.NuovoItinerarioMappaFragment"
+        android:label=" "
+        tools:layout="@layout/fragment_nuovo_itinerario_mappa"/>
+
+</navigation>

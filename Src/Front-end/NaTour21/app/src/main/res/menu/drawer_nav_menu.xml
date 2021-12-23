@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/profiloFragment"
+        android:title="Profilo"
+        android:icon="@drawable/ic_utente_icon"/>
+
+    <item
+        android:id="@+id/mieiItinerariFragment"
+        android:title="I miei itinerari"
+        android:icon="@drawable/ic_lista"/>
+
+</menu>

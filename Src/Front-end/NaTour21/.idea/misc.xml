@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/Aleks/AndroidStudioProjects/NaTour21/app/src/main/res/drawable-v24/circular_bordershape.xml" value="0.3651041666666667" />
+        <entry key="..\:/Users/Aleks/AndroidStudioProjects/NaTour21/app/src/main/res/drawable/ic_email.xml" value="0.3651041666666667" />
+        <entry key="..\:/Users/Aleks/AndroidStudioProjects/NaTour21/app/src/main/res/drawable/ic_lista.xml" value="0.3651041666666667" />
+        <entry key="..\:/Users/Aleks/AndroidStudioProjects/NaTour21/app/src/main/res/drawable/ic_utente_icon.xml" value="0.3651041666666667" />
+        <entry key="..\:/Users/Aleks/AndroidStudioProjects/NaTour21/app/src/main/res/drawable/rounded_shape.xml" value="0.3651041666666667" />
+        <entry key="..\:/Users/Aleks/AndroidStudioProjects/NaTour21/app/src/main/res/layout/activity_main.xml" value="0.22" />
+        <entry key="..\:/Users/Aleks/AndroidStudioProjects/NaTour21/app/src/main/res/layout/drawer_nav_header.xml" value="0.3489583333333333" />
+        <entry key="..\:/Users/Aleks/AndroidStudioProjects/NaTour21/app/src/main/res/layout/fragment_crea_account.xml" value="0.3489583333333333" />
+        <entry key="..\:/Users/Aleks/AndroidStudioProjects/NaTour21/app/src/main/res/layout/fragment_dettagli_itinerario.xml" value="0.3489583333333333" />
+        <entry key="..\:/Users/Aleks/AndroidStudioProjects/NaTour21/app/src/main/res/layout/fragment_effettua_accesso.xml" value="0.3489583333333333" />
+        <entry key="..\:/Users/Aleks/AndroidStudioProjects/NaTour21/app/src/main/res/layout/fragment_effettua_accesso_google.xml" value="0.3489583333333333" />
+        <entry key="..\:/Users/Aleks/AndroidStudioProjects/NaTour21/app/src/main/res/layout/fragment_home.xml" value="0.3489583333333333" />
+        <entry key="..\:/Users/Aleks/AndroidStudioProjects/NaTour21/app/src/main/res/layout/fragment_miei_itinerari.xml" value="0.3489583333333333" />
+        <entry key="..\:/Users/Aleks/AndroidStudioProjects/NaTour21/app/src/main/res/layout/fragment_nuovo_itinerario.xml" value="0.3489583333333333" />
+        <entry key="..\:/Users/Aleks/AndroidStudioProjects/NaTour21/app/src/main/res/layout/fragment_nuovo_itinerario_mappa.xml" value="0.3489583333333333" />
+        <entry key="..\:/Users/Aleks/AndroidStudioProjects/NaTour21/app/src/main/res/layout/fragment_profilo.xml" value="0.3489583333333333" />
+        <entry key="..\:/Users/Aleks/AndroidStudioProjects/NaTour21/app/src/main/res/menu/drawer_nav_menu.xml" value="0.3489583333333333" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
