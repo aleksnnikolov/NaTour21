@@ -27,9 +27,13 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/text_input_email"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        app:boxStrokeColor="@color/green"
+        app:boxStrokeWidthFocused="2dp"
+        app:boxStrokeWidth="1dp"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="128dp"
+        android:layout_marginTop="200dp"
         app:endIconMode="clear_text"
         app:layout_constraintEnd_toStartOf="@+id/guideline_right"
         app:layout_constraintStart_toStartOf="@+id/guideline_left"
@@ -53,6 +57,10 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/text_input_password"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        app:boxStrokeColor="@color/green"
+        app:boxStrokeWidthFocused="2dp"
+        app:boxStrokeWidth="1dp"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
@@ -81,6 +89,10 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/text_input_nome_utente"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        app:boxStrokeColor="@color/green"
+        app:boxStrokeWidthFocused="2dp"
+        app:boxStrokeWidth="1dp"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
@@ -114,7 +126,7 @@
         android:layout_marginBottom="8dp"
         android:textColor="@android:color/holo_red_light"
         android:visibility="invisible"
-        app:layout_constraintBottom_toTopOf="@+id/button_accedi"
+        app:layout_constraintBottom_toTopOf="@+id/button_crea_account"
         app:layout_constraintEnd_toStartOf="@+id/guideline_right"
         app:layout_constraintStart_toStartOf="@+id/guideline_left" />
 
@@ -135,7 +147,6 @@
         app:layout_constraintStart_toStartOf="@+id/guideline_left"
         app:layout_constraintTop_toBottomOf="@+id/text_input_nome_utente" />
 
-
     <TextView
         android:id="@+id/text_view_account_esistente"
         android:layout_width="wrap_content"
@@ -154,6 +165,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:indeterminate="true"
+        android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/text_input_nome_utente"

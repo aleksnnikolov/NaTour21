@@ -57,7 +57,9 @@ public class EffettuaAccessoFragment extends Fragment {
         accediButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                effettuaAccessoPresenter.effettuaAccesso();
+                String email = emailEditText.getText().toString();
+                String password = passwordEditText.getText().toString();
+                effettuaAccessoPresenter.effettuaAccesso(email, password);
             }
         });
 
@@ -69,6 +71,10 @@ public class EffettuaAccessoFragment extends Fragment {
         });
     }
 
-
-
+    public void mostraLabelErrore(String messaggio) {
+        getActivity().runOnUiThread(() -> {
+            inputInvalidoTextView.setVisibility(View.VISIBLE);
+            inputInvalidoTextView.setText(messaggio);
+        });
+    }
 }

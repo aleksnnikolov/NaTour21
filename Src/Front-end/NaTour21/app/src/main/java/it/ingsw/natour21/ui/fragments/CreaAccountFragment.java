@@ -9,11 +9,15 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentResultListener;
+
+import com.google.android.material.snackbar.Snackbar;
 
 import it.ingsw.natour21.R;
 import it.ingsw.natour21.control.presenters.CreaAccountPresenter;
+import it.ingsw.natour21.ui.dialogs.VerificaAccountDialog;
 
-public class CreaAccountFragment extends Fragment {
+public class CreaAccountFragment extends Fragment implements VerificaAccountDialog.VerificaAccountListener {
 
     private CreaAccountPresenter creaAccountPresenter;
 
@@ -27,6 +31,7 @@ public class CreaAccountFragment extends Fragment {
 
     private View indicatoreDiAttesa;
     private View snackBarPosition;
+
 
     public CreaAccountFragment() {super(R.layout.fragment_crea_account);}
 
@@ -59,7 +64,11 @@ public class CreaAccountFragment extends Fragment {
         creaAccountButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                creaAccountPresenter.creaAccount();
+                String email = emailEditText.getText().toString();
+                String nomeUtente = nomeUtenteEditText.getText().toString();
+                String password = passwordEditText.getText().toString();
+
+                creaAccountPresenter.creaAccount(email, nomeUtente, password);
             }
         });
 
@@ -71,4 +80,45 @@ public class CreaAccountFragment extends Fragment {
         });
     }
 
+    public void apriVerificaAccountDialog() {
+        VerificaAccountDialog verificaAccountDialog = new VerificaAccountDialog();
+        /*getParentFragmentManager().setFragmentResultListener("VERIFICA CODICE", verificaAccountDialog, new FragmentResultListener() {
+            @Override
+            public void onFragmentResult(@NonNull String requestKey, @NonNull Bundle result) {
+                accountVerificato();
+            }
+        });*/
+        verificaAccountDialog.setTargetFragment(CreaAccountFragment.this, 1);
+        verificaAccountDialog.show(getParentFragmentManager(), "verifica account");
+    }
+
+    // questo metodo viene chiamato quando l'utente conferma il codice inviatogli via mail durante la registrazione
+    @Override
+    public void accountVerificato() {
+        //Aggiungi informazioni utente su database
+        creaAccountPresenter.mostraSchermataEffettuaAccesso();
+    }
+
+    public void mostraMessaggioDiAvviso(String messaggio) {
+        Snackbar.make(snackBarPosition, messaggio, Snackbar.LENGTH_SHORT).show();
+    }
+
+    public void mostraLabelErrore(String messaggio) {
+        getActivity().runOnUiThread(() -> {
+            inputInvalidoTextView.setVisibility(View.VISIBLE);
+            inputInvalidoTextView.setText(messaggio);
+        });
+    }
+
+    public void nascondiLabelErrore() {
+        inputInvalidoTextView.setVisibility(View.INVISIBLE);
+    }
+
+    public void mostraIndicatoreAttesa() {
+        indicatoreDiAttesa.setVisibility(View.VISIBLE);
+    }
+
+    public void nascondiIndicatoreAttesa() {
+        indicatoreDiAttesa.setVisibility(View.INVISIBLE);
+    }
 }

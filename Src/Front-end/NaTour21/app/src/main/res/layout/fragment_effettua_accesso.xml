@@ -51,10 +51,15 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/text_input_email"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        app:boxStrokeColor="@color/green"
+        app:boxStrokeWidthFocused="2dp"
+        app:boxStrokeWidth="1dp"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="60dp"
         app:endIconMode="clear_text"
+        android:hint="email"
         app:layout_constraintEnd_toStartOf="@+id/guideline_right"
         app:layout_constraintStart_toStartOf="@+id/guideline_left"
         app:layout_constraintTop_toBottomOf="@+id/natour_title" >
@@ -66,7 +71,6 @@
             android:drawableStart="@drawable/ic_email"
             android:drawablePadding="8dp"
             android:drawableTint="@color/desaturated_green"
-            android:hint="email"
             android:inputType="textEmailAddress"
             android:maxLines="1"
             android:padding="12dp"
@@ -77,9 +81,14 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/text_input_password"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        app:boxStrokeColor="@color/green"
+        app:boxStrokeWidthFocused="2dp"
+        app:boxStrokeWidth="1dp"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
+        android:hint="password"
         app:layout_constraintEnd_toStartOf="@+id/guideline_right"
         app:layout_constraintStart_toStartOf="@+id/guideline_left"
         app:layout_constraintTop_toBottomOf="@+id/text_input_email"
@@ -93,7 +102,6 @@
             android:drawableStart="@drawable/ic_password"
             android:drawablePadding="8dp"
             android:drawableTint="@color/desaturated_green"
-            android:hint="password"
             android:inputType="textPassword"
             android:maxLines="1"
             android:padding="12dp"

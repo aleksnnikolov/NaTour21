@@ -7,8 +7,11 @@
         <entry key="..\:/Users/Aleks/AndroidStudioProjects/NaTour21/app/src/main/res/drawable/ic_email.xml" value="0.3651041666666667" />
         <entry key="..\:/Users/Aleks/AndroidStudioProjects/NaTour21/app/src/main/res/drawable/ic_lista.xml" value="0.3651041666666667" />
         <entry key="..\:/Users/Aleks/AndroidStudioProjects/NaTour21/app/src/main/res/drawable/ic_utente_icon.xml" value="0.3651041666666667" />
+        <entry key="..\:/Users/Aleks/AndroidStudioProjects/NaTour21/app/src/main/res/drawable/rounded_dialogue_bg.xml" value="0.3651041666666667" />
         <entry key="..\:/Users/Aleks/AndroidStudioProjects/NaTour21/app/src/main/res/drawable/rounded_shape.xml" value="0.3651041666666667" />
         <entry key="..\:/Users/Aleks/AndroidStudioProjects/NaTour21/app/src/main/res/layout/activity_main.xml" value="0.22" />
+        <entry key="..\:/Users/Aleks/AndroidStudioProjects/NaTour21/app/src/main/res/layout/dialog_verifica_account.xml" value="0.253125" />
+        <entry key="..\:/Users/Aleks/AndroidStudioProjects/NaTour21/app/src/main/res/layout/dialog_verifica_codice.xml" value="0.3489583333333333" />
         <entry key="..\:/Users/Aleks/AndroidStudioProjects/NaTour21/app/src/main/res/layout/drawer_nav_header.xml" value="0.3489583333333333" />
         <entry key="..\:/Users/Aleks/AndroidStudioProjects/NaTour21/app/src/main/res/layout/fragment_crea_account.xml" value="0.3489583333333333" />
         <entry key="..\:/Users/Aleks/AndroidStudioProjects/NaTour21/app/src/main/res/layout/fragment_dettagli_itinerario.xml" value="0.3489583333333333" />

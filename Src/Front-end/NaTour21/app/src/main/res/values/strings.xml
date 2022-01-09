@@ -6,24 +6,27 @@
     <string name="account_mancante"><u>Non hai un account?</u></string>
     <string name="account_esistente"><u>Hai già un account?</u></string>
 
-    <!-- messaggi di avviso o errore -->
-    <string name="avviso_connessione_mancante"><u>problemi di connessione</u></string>
 
+    <!-- messaggi di mancanza servizio -->
+    <string name="avviso_connessione_mancante"><u>connessione internet non disponibile</u></string>
+    <string name="avviso_copertura_mancante"><u>copertura gps non disponibile</u></string>
+
+    <!-- registrazione -->
     <string name="avviso_campi_vuoti"><u>per favore compilare tutti i campi</u></string>
     <string name="avviso_formato_mail_invalido"><u>il formato della email inserita non è valido</u></string>
-    <string name="avviso_formato_password_invalido"><u>la password deve essere di almeno 8 caratteri e contenere almeno una lettera maiuscola, minuscola e cifra</u></string>
-    <string name="avviso_mail_inesistente"><u>non ci risulta un account con questa mail</u></string>
+    <string name="avviso_formato_password_invalido"><u>la password deve essere di almeno 8 caratteri</u></string>
     <string name="avviso_mail_esistente"><u>esiste già un account con questa mail</u></string>
-    <string name="avviso_mail_non_valida"><u>inserire una mail esistente</u></string>
-    <string name="avviso_password_sbagliata"><u>password errata, riprovare</u></string>
     <string name="avviso_formato_nome_utente_invalido"><u>il nome utente deve essere di almeno 4 caratteri</u></string>
+
+    <!-- login -->
+    <string name="avviso_credenziali_errate"><u>verificare che la mail e la password siano corretti</u></string>
+    <string name="avviso_mail_inesistente"><u>non ci risulta un account con questa mail</u></string>
+    <string name="avviso_password_sbagliata"><u>password errata, riprovare</u></string>
     <string name="avviso_mancanza_nome_utente"><u>per favore inserire un nome utente</u></string>
+
+    <!-- cambio password -->
     <string name="avviso_password_non_coincidenti"><u>la password nuova deve corrisponedere alla conferma</u></string>
     <string name="avviso_password_nuova_coincidente"><u>la nuova password deve essere diversa dalla vecchia</u></string>
-    <string name="avviso_credenziali_errate"><u>controllare che la mail e la password siano corretti</u></string>
-
-    <string name="avviso_codice_di_verifica_inviato"><u>un codice di verifica è stato inviato alla tua mail</u></string>
-    <string name="avviso_codice_di_verifica_errato"><u>il codice inserito è errato</u></string>
 
 
     <string name="errore_generico"><u>si è verificato un errore</u></string>
