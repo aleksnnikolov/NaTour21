@@ -1,1 +1,3 @@
 SignUpInputValidator::validaCompilazioneCampi
+Utils::generaDurataItinearario
+eventuale metodo che estrae un percorso da un file GPX

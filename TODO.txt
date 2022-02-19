@@ -1,0 +1,4 @@
+- Implementa la scelta di un ambiente per l'itinerario: natura, città, bosco, agriturismo, beach, altri
+
+- Nel documento di valutazione a priori, descrivi come gli utenti hanno suggerito il campo di sopra, inoltre descrivi come l'interfaccia si è
+  evoluta mediante il feedback degli utenti (ad esempio al posto di avere la durata come campo di testo, è molto più comodo e carino il NumberPicker)

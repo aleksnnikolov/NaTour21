@@ -1,0 +1,55 @@
+*** UTENTE ********************************************************************
+
+
+Restituisce tutti i dettagli dell'utente con l'email specificata
+GET
+/natour/user/data?email=mail@mail.com
+
+Crea un nuovo utente inviando i parametri necessari come json
+Il backend genererà un codice a 6 cifre che sarà l'id univoco dell'utente
+POST
+/natour/user
+formato json:
+{
+    "email": "aleks.nikolov@libero.it",
+    "nomeUtente": "cortvlkn",
+    "dataCreazioneAccount": "2022-01-14 19:53:05",
+    "immagineProfilo": "img/abc.png"
+}
+
+
+
+*** ITINERARIO **************************************************************
+
+Restituisce gli ultimi 5 itinerari creati
+GET
+/natour/route/recent/
+
+Restituisce gli itinerari creati dall'utente con l'id specificato
+GET
+/natour/route/user/{userID}
+
+Restituisce i dettagli dell'itinerario con l'id specificato
+GET
+/natour/route/{itinerarioID}
+
+Crea un nuovo itinerario
+Il backend genererà un codice a 10 cifre che sarà l'id univoco dell'itinerario
+POST
+/natour/route
+formato json:
+{
+    "itinerarioID": "5678901234",
+    "titolo": "Il Più Grande Cammino",
+    "descrizione": "Si cammina ancora di più su questo cammino",
+    "durata": 150,
+    "difficolta": "MEDIO",
+    "dataInserimento": "2022-01-24 22:00:00",
+    "userID": "685433"
+}
+
+Elimina l'itinerario con l'id specificato (i punti itinerario andranno eliminati con il cascade)
+DELETE
+/natour/route/id
+
+*** PUNTI ITINERARIO ****************************************************************
