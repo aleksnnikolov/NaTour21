@@ -12,11 +12,11 @@
     <string name="avviso_copertura_mancante"><u>copertura gps non disponibile</u></string>
 
     <!-- registrazione -->
-    <string name="avviso_campi_vuoti"><u>per favore compilare tutti i campi</u></string>
-    <string name="avviso_formato_mail_invalido"><u>il formato della email inserita non è valido</u></string>
-    <string name="avviso_formato_password_invalido"><u>la password deve essere di almeno 8 caratteri</u></string>
-    <string name="avviso_mail_esistente"><u>esiste già un account con questa mail</u></string>
-    <string name="avviso_formato_nome_utente_invalido"><u>il nome utente deve essere di almeno 4 caratteri</u></string>
+    <string name="avviso_campi_vuoti">⚠ <u>per favore compilare tutti i campi</u></string>
+    <string name="avviso_formato_mail_invalido">⚠ <u>il formato della email inserita non è valido</u></string>
+    <string name="avviso_formato_password_invalido">⚠ <u>la password deve essere di almeno 8 caratteri e contenere almeno una lettera maiuscola, minuscola e una cifra</u></string>
+    <string name="avviso_mail_esistente">⚠ <u>esiste già un account con questa mail</u></string>
+    <string name="avviso_formato_nome_utente_invalido">⚠ <u>il nome utente deve avere da 4 a 25 caratteri e non può essere composto di spazi</u></string>
 
     <!-- login -->
     <string name="avviso_credenziali_errate"><u>verificare che la mail e la password siano corretti</u></string>
@@ -28,7 +28,17 @@
     <string name="avviso_password_non_coincidenti"><u>la password nuova deve corrisponedere alla conferma</u></string>
     <string name="avviso_password_nuova_coincidente"><u>la nuova password deve essere diversa dalla vecchia</u></string>
 
+    <!-- errori compilazione itinerario -->
+    <string name="titolo_itinerario_obbligatorio">⚠ <u>il titolo è obbligatorio</u></string>
+    <string name="titolo_itinerario_esistente">⚠ <u>esiste già un itinerario con questo nome</u></string>
+    <string name="percorso_invalido">⚠ <u>inserire un percorso valido</u></string>
+
+
 
     <string name="errore_generico"><u>si è verificato un errore</u></string>
     <string name="errore_accesso"><u>errore di login</u></string>
+
+    <string name="partenza">⦿ partenza</string>
+    <string name="destinazione">⦿ destinazione</string>
+    <string name="tappa">• tappa %1$s</string>
 </resources>

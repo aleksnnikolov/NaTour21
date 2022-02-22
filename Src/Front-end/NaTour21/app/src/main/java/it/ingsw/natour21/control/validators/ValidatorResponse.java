@@ -1,5 +1,7 @@
 package it.ingsw.natour21.control.validators;
 
+import java.util.Objects;
+
 public class ValidatorResponse {
 
     private boolean inputValido;
@@ -14,15 +16,23 @@ public class ValidatorResponse {
         return inputValido;
     }
 
-    public void setInputValido(boolean inputValido) {
-        this.inputValido = inputValido;
-    }
-
     public String getMessaggioErrore() {
         return messaggioErrore;
     }
 
-    public void setMessaggioErrore(String messaggioErrore) {
-        this.messaggioErrore = messaggioErrore;
+    @Override
+    public String toString() {
+        return "ValidatorResponse{" +
+                "inputValido=" + inputValido +
+                ", messaggioErrore='" + messaggioErrore + '\'' +
+                '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        ValidatorResponse that = (ValidatorResponse) o;
+        return inputValido == that.inputValido && Objects.equals(messaggioErrore, that.messaggioErrore);
     }
 }

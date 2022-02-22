@@ -52,7 +52,7 @@
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/text_input_email"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        app:boxStrokeColor="@color/green"
+        app:boxStrokeColor="@color/cyan"
         app:boxStrokeWidthFocused="2dp"
         app:boxStrokeWidth="1dp"
         android:layout_width="0dp"
@@ -82,7 +82,7 @@
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/text_input_password"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        app:boxStrokeColor="@color/green"
+        app:boxStrokeColor="@color/cyan"
         app:boxStrokeWidthFocused="2dp"
         app:boxStrokeWidth="1dp"
         android:layout_width="0dp"
@@ -119,10 +119,9 @@
         android:layout_marginTop="8dp"
         android:text="@string/password_dimenticata"
         android:textStyle="bold"
-        android:textColor="?colorSecondary"
+        android:textColor="@color/desaturated_green"
         app:layout_constraintStart_toStartOf="@+id/guideline_left"
         app:layout_constraintTop_toBottomOf="@+id/text_input_password" />
-
 
     <TextView
         android:id="@+id/text_view_input_invalido"
@@ -135,17 +134,16 @@
         app:layout_constraintEnd_toStartOf="@+id/guideline_right"
         app:layout_constraintStart_toStartOf="@+id/guideline_left" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/button_accedi"
-        style="@style/RoundedButton"
+        android:background="@drawable/btn_bg1"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="56dp"
         app:cornerRadius="20dp"
         android:padding="16dp"
         android:text="ACCEDI"
-        app:backgroundTint="?colorPrimary"
-        android:textColor="?colorOnSecondary"
+        android:textColor="@color/blue"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toStartOf="@+id/guideline_right"
@@ -159,6 +157,7 @@
         android:layout_marginTop="8dp"
         android:text="@string/account_mancante"
         android:textStyle="bold"
+        android:textColor="@color/desaturated_green"
         app:layout_constraintEnd_toStartOf="@+id/guideline_right"
         app:layout_constraintStart_toStartOf="@+id/guideline_left"
         app:layout_constraintTop_toBottomOf="@+id/button_accedi" />

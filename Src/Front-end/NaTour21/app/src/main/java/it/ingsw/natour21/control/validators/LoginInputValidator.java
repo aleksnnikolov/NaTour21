@@ -15,8 +15,8 @@ public class LoginInputValidator {
         boolean esitoValidazione = true;
         String messaggioErrore = "";
 
-        if (ValidationUtils.campoVuoto(email) ||
-                ValidationUtils.campoVuoto(password)) {
+        if (ValidationRules.campoVuoto(email) ||
+                ValidationRules.campoVuoto(password)) {
 
             esitoValidazione = false;
             messaggioErrore = fragment.getString(R.string.avviso_campi_vuoti);

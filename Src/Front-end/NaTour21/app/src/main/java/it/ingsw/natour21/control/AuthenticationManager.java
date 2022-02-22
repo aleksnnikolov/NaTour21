@@ -35,14 +35,14 @@ public class AuthenticationManager {
         }
     }
 
-    public void registraUtente(String email, String password) {
+    public void registraUtente(String email, String password, String nomeUtente) {
 
         AuthSignUpOptions options = AuthSignUpOptions.builder()
                 .userAttribute(AuthUserAttributeKey.email(), email)
                 .build();
         Amplify.Auth.signUp(email, password, options,
                 result -> { Log.i("AMPLIFY", "Result: " + result.toString());
-                               creaAccountPresenter.mostraVerificaAccountDialog(); },
+                               creaAccountPresenter.terminaCreazioneAccount(email, nomeUtente); },
                 error -> { Log.e("AMPLIFY", "Sign up failed", error);
                                creaAccountPresenter.mostraMessaggioErrore(error.getMessage());}
         );
@@ -55,7 +55,7 @@ public class AuthenticationManager {
                 password,
                 result -> {Log.i("AMPLIFY", result.isSignInComplete() ? "Sign in succeeded" : "Sign in not complete");
                             if (result.isSignInComplete())
-                                effettuaAccessoPresenter.mostraSchermataHome();},
+                                effettuaAccessoPresenter.getDatiUtente(email);},
                 error -> {Log.e("AMPLIFY", error.toString());
                             effettuaAccessoPresenter.mostraMessaggioErrore(error.getMessage());}
         );

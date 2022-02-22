@@ -1,43 +1,38 @@
 package it.ingsw.natour21.control.validators;
 
+import android.content.Context;
+
 import androidx.fragment.app.Fragment;
 
 import it.ingsw.natour21.R;
 
 public class SignUpInputValidator {
 
-    private Fragment fragment;
-
-    public SignUpInputValidator(Fragment fragment) {
-        this.fragment = fragment;
-    }
-
-
     public ValidatorResponse validaCompilazioneCampi(String email, String password, String nomeUtente) {
         boolean esitoValidazione = true;
         String messaggioErrore = "";
 
-        if (ValidationUtils.formatoNomeUtenteInvalido(nomeUtente)) {
+        if (ValidationRules.formatoNomeUtenteInvalido(nomeUtente)) {
             esitoValidazione = false;
-            messaggioErrore = fragment.getString(R.string.avviso_formato_nome_utente_invalido);
+            messaggioErrore = "formato nome utente invalido";
         }
 
-        if (ValidationUtils.formatoPasswordInvalido(password)) {
+        if (ValidationRules.formatoPasswordInvalido(password)) {
             esitoValidazione = false;
-            messaggioErrore = fragment.getString(R.string.avviso_formato_password_invalido);
+            messaggioErrore = "formato password invalido";
         }
 
-        if (ValidationUtils.formatoMailInvalido(email)) {
+        if (ValidationRules.formatoMailInvalido(email)) {
             esitoValidazione = false;
-            messaggioErrore = fragment.getString(R.string.avviso_formato_mail_invalido);
+            messaggioErrore = "formato email invalido";
         }
 
-        if (ValidationUtils.campoVuoto(nomeUtente) ||
-                ValidationUtils.campoVuoto(email) ||
-                ValidationUtils.campoVuoto(password)) {
+        if (ValidationRules.campoVuoto(nomeUtente) ||
+                ValidationRules.campoVuoto(email) ||
+                ValidationRules.campoVuoto(password)) {
 
             esitoValidazione = false;
-            messaggioErrore = fragment.getString(R.string.avviso_campi_vuoti);
+            messaggioErrore = "campo non compilato";
         }
 
         return new ValidatorResponse(esitoValidazione, messaggioErrore);

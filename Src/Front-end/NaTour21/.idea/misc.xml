@@ -3,14 +3,30 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Aleks/.gradle/caches/transforms-3/bfc76593c969c78fd27e5869e21f05fa/transformed/jetified-library-3.4.0/res/drawable/below_shadow.xml" value="0.3651041666666667" />
+        <entry key="..\:/Users/Aleks/AndroidStudioProjects/NaTour21/app/src/main/res/drawable-anydpi/ic_delete.xml" value="0.3651041666666667" />
+        <entry key="..\:/Users/Aleks/AndroidStudioProjects/NaTour21/app/src/main/res/drawable-anydpi/ic_finish_cyan.xml" value="0.31296296296296294" />
+        <entry key="..\:/Users/Aleks/AndroidStudioProjects/NaTour21/app/src/main/res/drawable-anydpi/ic_finish_flag.xml" value="0.31296296296296294" />
         <entry key="..\:/Users/Aleks/AndroidStudioProjects/NaTour21/app/src/main/res/drawable-v24/circular_bordershape.xml" value="0.3651041666666667" />
+        <entry key="..\:/Users/Aleks/AndroidStudioProjects/NaTour21/app/src/main/res/drawable-v24/light_rounded_shape.xml" value="0.3651041666666667" />
+        <entry key="..\:/Users/Aleks/AndroidStudioProjects/NaTour21/app/src/main/res/drawable-xhdpi/horizontal_divider.xml" value="0.3651041666666667" />
+        <entry key="..\:/Users/Aleks/AndroidStudioProjects/NaTour21/app/src/main/res/drawable-xxxhdpi/btn_bg2.xml" value="0.3651041666666667" />
+        <entry key="..\:/Users/Aleks/AndroidStudioProjects/NaTour21/app/src/main/res/drawable/btn_bg1.xml" value="0.3651041666666667" />
+        <entry key="..\:/Users/Aleks/AndroidStudioProjects/NaTour21/app/src/main/res/drawable/edit_text_border.xml" value="0.3651041666666667" />
         <entry key="..\:/Users/Aleks/AndroidStudioProjects/NaTour21/app/src/main/res/drawable/ic_email.xml" value="0.3651041666666667" />
+        <entry key="..\:/Users/Aleks/AndroidStudioProjects/NaTour21/app/src/main/res/drawable/ic_finish_flag_background.xml" value="0.34814814814814815" />
+        <entry key="..\:/Users/Aleks/AndroidStudioProjects/NaTour21/app/src/main/res/drawable/ic_finish_line_flag_svgrepo_com.xml" value="0.3651041666666667" />
         <entry key="..\:/Users/Aleks/AndroidStudioProjects/NaTour21/app/src/main/res/drawable/ic_lista.xml" value="0.3651041666666667" />
         <entry key="..\:/Users/Aleks/AndroidStudioProjects/NaTour21/app/src/main/res/drawable/ic_utente_icon.xml" value="0.3651041666666667" />
         <entry key="..\:/Users/Aleks/AndroidStudioProjects/NaTour21/app/src/main/res/drawable/rounded_dialogue_bg.xml" value="0.3651041666666667" />
         <entry key="..\:/Users/Aleks/AndroidStudioProjects/NaTour21/app/src/main/res/drawable/rounded_shape.xml" value="0.3651041666666667" />
         <entry key="..\:/Users/Aleks/AndroidStudioProjects/NaTour21/app/src/main/res/layout/activity_main.xml" value="0.22" />
-        <entry key="..\:/Users/Aleks/AndroidStudioProjects/NaTour21/app/src/main/res/layout/dialog_verifica_account.xml" value="0.253125" />
+        <entry key="..\:/Users/Aleks/AndroidStudioProjects/NaTour21/app/src/main/res/layout/card_indirizzo.xml" value="0.3489583333333333" />
+        <entry key="..\:/Users/Aleks/AndroidStudioProjects/NaTour21/app/src/main/res/layout/card_itinerario_home.xml" value="0.3489583333333333" />
+        <entry key="..\:/Users/Aleks/AndroidStudioProjects/NaTour21/app/src/main/res/layout/card_itinerario_miei_itin.xml" value="0.3489583333333333" />
+        <entry key="..\:/Users/Aleks/AndroidStudioProjects/NaTour21/app/src/main/res/layout/dialog_modifica_durata.xml" value="0.3489583333333333" />
+        <entry key="..\:/Users/Aleks/AndroidStudioProjects/NaTour21/app/src/main/res/layout/dialog_uscita_nuovo_itinerario.xml" value="0.3489583333333333" />
+        <entry key="..\:/Users/Aleks/AndroidStudioProjects/NaTour21/app/src/main/res/layout/dialog_verifica_account.xml" value="0.33" />
         <entry key="..\:/Users/Aleks/AndroidStudioProjects/NaTour21/app/src/main/res/layout/dialog_verifica_codice.xml" value="0.3489583333333333" />
         <entry key="..\:/Users/Aleks/AndroidStudioProjects/NaTour21/app/src/main/res/layout/drawer_nav_header.xml" value="0.3489583333333333" />
         <entry key="..\:/Users/Aleks/AndroidStudioProjects/NaTour21/app/src/main/res/layout/fragment_crea_account.xml" value="0.3489583333333333" />
@@ -19,10 +35,13 @@
         <entry key="..\:/Users/Aleks/AndroidStudioProjects/NaTour21/app/src/main/res/layout/fragment_effettua_accesso_google.xml" value="0.3489583333333333" />
         <entry key="..\:/Users/Aleks/AndroidStudioProjects/NaTour21/app/src/main/res/layout/fragment_home.xml" value="0.3489583333333333" />
         <entry key="..\:/Users/Aleks/AndroidStudioProjects/NaTour21/app/src/main/res/layout/fragment_miei_itinerari.xml" value="0.3489583333333333" />
-        <entry key="..\:/Users/Aleks/AndroidStudioProjects/NaTour21/app/src/main/res/layout/fragment_nuovo_itinerario.xml" value="0.3489583333333333" />
-        <entry key="..\:/Users/Aleks/AndroidStudioProjects/NaTour21/app/src/main/res/layout/fragment_nuovo_itinerario_mappa.xml" value="0.3489583333333333" />
+        <entry key="..\:/Users/Aleks/AndroidStudioProjects/NaTour21/app/src/main/res/layout/fragment_nuovo_itinerario.xml" value="0.33" />
+        <entry key="..\:/Users/Aleks/AndroidStudioProjects/NaTour21/app/src/main/res/layout/fragment_nuovo_itinerario_mappa.xml" value="0.25" />
         <entry key="..\:/Users/Aleks/AndroidStudioProjects/NaTour21/app/src/main/res/layout/fragment_profilo.xml" value="0.3489583333333333" />
+        <entry key="..\:/Users/Aleks/AndroidStudioProjects/NaTour21/app/src/main/res/layout/panel_indirizzi_mappa.xml" value="0.3489583333333333" />
+        <entry key="..\:/Users/Aleks/AndroidStudioProjects/NaTour21/app/src/main/res/layout/panel_interazioni_mappa.xml" value="0.3489583333333333" />
         <entry key="..\:/Users/Aleks/AndroidStudioProjects/NaTour21/app/src/main/res/menu/drawer_nav_menu.xml" value="0.3489583333333333" />
+        <entry key="..\:/Users/Aleks/AndroidStudioProjects/NaTour21/app/src/main/res/mipmap-anydpi-v26/ic_finish_flag.xml" value="0.34814814814814815" />
       </map>
     </option>
   </component>

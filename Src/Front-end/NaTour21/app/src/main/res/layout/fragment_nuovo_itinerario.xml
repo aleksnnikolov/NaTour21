@@ -6,16 +6,321 @@
     android:layout_height="match_parent"
     android:layout_gravity="center"
     android:background="?background"
-    android:orientation="vertical"
     tools:context=".ui.fragments.NuovoItinerarioFragment">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="NUOVO ITINERARIO"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <ScrollView
+        android:id="@+id/scroll_view_nuovo_itinerario"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="80dp"
+        app:layout_constraintBottom_toTopOf="@id/button_container"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/container_scheda_film"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/dati_itinerario_container"
+                android:layout_width="match_parent"
+                android:layout_height="400dp">
+
+                <TextView
+                    android:id="@+id/text_view_nuovo_itinerario"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="6dp"
+                    android:text="NUOVO ITINERARIO"
+                    android:textColor="@color/cyan"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/label_titolo_itinerario"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="20dp"
+                    android:text="Titolo"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/text_view_nuovo_itinerario" />
+
+                <TextView
+                    android:id="@+id/label_titolo_errore"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:textColor="@color/red"
+                    android:text=""
+                    android:textSize="16sp"
+                    android:visibility="invisible"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/edit_text_titolo_itinerario" />
+
+                <EditText
+                    android:id="@+id/edit_text_titolo_itinerario"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:paddingStart="4dp"
+                    android:textSize="20sp"
+                    android:background="@drawable/edit_text_border"
+                    android:minEms="12"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/label_titolo_itinerario" />
+
+                <TextView
+                    android:id="@+id/label_durata_itinerario"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="24dp"
+                    android:text="Durata: "
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/label_titolo_errore" />
+
+                <TextView
+                    android:id="@+id/text_view_durata_itinerario"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/label_durata_itinerario"
+                    app:layout_constraintStart_toEndOf="@+id/label_durata_itinerario"
+                    app:layout_constraintTop_toTopOf="@+id/label_durata_itinerario" />
+
+                <ImageButton
+                    android:id="@+id/button_aggiungi_durata"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginStart="8dp"
+                    android:background="@drawable/light_rounded_shape"
+                    android:backgroundTint="@color/cyan_light"
+                    android:padding="6dp"
+                    android:src="@drawable/ic_add"
+                    app:layout_constraintBottom_toBottomOf="@+id/text_view_durata_itinerario"
+                    app:layout_constraintStart_toEndOf="@+id/text_view_durata_itinerario"
+                    app:layout_constraintTop_toTopOf="@+id/text_view_durata_itinerario"
+                    app:tint="@color/dark_green" />
+
+                <TextView
+                    android:id="@+id/label_difficolta_itinerario"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="24dp"
+                    android:text="Difficoltà: "
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/label_durata_itinerario" />
+
+                <Spinner
+                    android:id="@+id/spinner_difficolta_itinerario"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="@+id/label_difficolta_itinerario"
+                    app:layout_constraintStart_toEndOf="@+id/label_difficolta_itinerario"
+                    app:layout_constraintTop_toTopOf="@+id/label_difficolta_itinerario" />
+
+                <TextView
+                    android:id="@+id/label_descrizione_itinerario"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="24dp"
+                    android:text="Descrizione: "
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/label_difficolta_itinerario" />
+
+                <EditText
+                    android:id="@+id/text_area_descrizione_itinerario"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@drawable/edit_text_border"
+                    android:gravity="top|left"
+                    android:inputType="textMultiLine"
+                    android:padding="4dp"
+                    android:lines="5"
+                    android:maxLines="5"
+                    android:overScrollMode="always"
+                    android:scrollbarStyle="insideInset"
+                    android:scrollbars="vertical"
+                    android:scrollHorizontally="false"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/label_descrizione_itinerario" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/desaturated_green" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/percorso_itinerario_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/text_view_percorso_itinerario"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:padding="6dp"
+                    android:text="PERCORSO"
+                    android:textColor="@color/cyan"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageButton
+                    android:id="@+id/button_elimina_percorso"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:padding="8dp"
+                    android:backgroundTint="@color/rosè"
+                    app:tint="@color/white"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginEnd="8dp"
+                    android:src="@drawable/ic_delete"
+                    app:layout_constraintEnd_toStartOf="@+id/button_mappa"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/button_mappa"
+                    android:background="@drawable/btn_bg1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_weight="1"
+                    android:drawableLeft="@drawable/ic_map"
+                    android:drawableTint="@color/blue"
+                    android:minWidth="0dp"
+                    android:minHeight="0dp"
+                    android:padding="8dp"
+                    android:text="MAPPA"
+                    android:textSize="10sp"
+                    app:layout_constraintEnd_toStartOf="@id/button_gpx"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/button_gpx"
+                    android:background="@drawable/btn_bg1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:layout_weight="1"
+                    android:drawableLeft="@drawable/ic_file"
+                    android:drawableTint="@color/blue"
+                    android:minWidth="0dp"
+                    android:minHeight="0dp"
+                    android:padding="8dp"
+                    android:text="IMPORTA GPX"
+                    android:textSize="10sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/label_percorso_errore"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:visibility="invisible"
+                    android:textColor="@color/red"
+                    android:textSize="16sp"
+                    android:layout_margin="4dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/button_mappa" />
+
+                <TextView
+                    android:id="@+id/text_view_percorso_mancante"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#CCCCCC"
+                    android:visibility="invisible"
+                    android:textStyle="italic"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/label_percorso_errore"
+                    android:text="questo itinerario non presenta un percorso" />
+
+                <LinearLayout
+                    android:id="@+id/layout_percorso_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/label_percorso_errore">
+
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/button_container"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@color/blue_lightest"
+        android:padding="8dp"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <Button
+            android:id="@+id/button_indietro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:layout_weight="0.5"
+            android:backgroundTint="#d6bba8"
+            android:minWidth="0dp"
+            android:minHeight="0dp"
+            android:padding="8dp"
+            android:drawableLeft="@drawable/ic_back"
+            android:drawableTint="@color/white"
+            android:text="INDIETRO" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button_salva_itinerario"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:layout_weight="2"
+            android:minWidth="0dp"
+            android:minHeight="0dp"
+            android:textColor="@color/white"
+            android:background="@color/blue"
+            android:drawableLeft="@drawable/ic_save"
+            android:drawableTint="@color/white"
+            android:padding="8dp"
+            android:text="AGGIUNGI ITINERARIO" />
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -79,7 +79,12 @@
         android:id="@+id/dettagliItinerarioFragment"
         android:name="it.ingsw.natour21.ui.fragments.DettagliItinerarioFragment"
         android:label=" "
-        tools:layout="@layout/fragment_dettagli_itinerario"/>
+        tools:layout="@layout/fragment_dettagli_itinerario">
+        <argument
+            android:name="itinerarioID"
+            app:argType="string"
+            app:nullable="true" />
+    </fragment>
 
     <fragment
         android:id="@+id/nuovoItinerarioFragment"

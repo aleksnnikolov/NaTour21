@@ -1,22 +1,32 @@
 package it.ingsw.natour21.control.presenters;
 
+import android.util.Log;
+
 import androidx.navigation.NavDirections;
 import androidx.navigation.Navigation;
 
 import it.ingsw.natour21.R;
 import it.ingsw.natour21.control.AuthenticationManager;
+import it.ingsw.natour21.control.UtenteCorrenteHolder;
 import it.ingsw.natour21.control.Utils;
 import it.ingsw.natour21.control.validators.LoginInputValidator;
 import it.ingsw.natour21.control.validators.ValidatorResponse;
+import it.ingsw.natour21.model.callbacks.OnCreateUser;
+import it.ingsw.natour21.model.callbacks.OnLoginUser;
+import it.ingsw.natour21.model.dao.UtenteDAOImpl;
+import it.ingsw.natour21.model.dao.interfaces.UtenteDAO;
+import it.ingsw.natour21.model.entities.Utente;
 import it.ingsw.natour21.ui.fragments.EffettuaAccessoFragment;
 import it.ingsw.natour21.ui.fragments.EffettuaAccessoFragmentDirections;
 
 public class EffettuaAccessoPresenter {
 
     private EffettuaAccessoFragment effettuaAccessoFragment;
+    private UtenteDAO utenteDAO;
 
     public EffettuaAccessoPresenter(EffettuaAccessoFragment effettuaAccessoFragment) {
         this.effettuaAccessoFragment = effettuaAccessoFragment;
+        utenteDAO = new UtenteDAOImpl(effettuaAccessoFragment.getContext());
     }
 
     public void mostraSchermataCreaAccount() {
@@ -36,6 +46,21 @@ public class EffettuaAccessoPresenter {
                 mostraMessaggioErrore(validatorResponse.getMessaggioErrore());
             }
         }
+    }
+
+    public void getDatiUtente(String email) {
+        utenteDAO.getDettagliUtente(email, new OnLoginUser() {
+            @Override
+            public void onSuccess(Utente utente) {
+                UtenteCorrenteHolder.utente = utente;
+                mostraSchermataHome();
+            }
+
+            @Override
+            public void onFailure() {
+                Log.e("UTENTE", "onFailure: errore nel retrieve dei dati");
+            }
+        });
     }
 
     public void mostraSchermataHome() {

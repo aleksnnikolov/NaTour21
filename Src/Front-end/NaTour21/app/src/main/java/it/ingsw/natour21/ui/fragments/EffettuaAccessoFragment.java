@@ -59,7 +59,9 @@ public class EffettuaAccessoFragment extends Fragment {
             public void onClick(View v) {
                 String email = emailEditText.getText().toString();
                 String password = passwordEditText.getText().toString();
-                effettuaAccessoPresenter.effettuaAccesso(email, password);
+
+                //effettuaAccessoPresenter.effettuaAccesso(email, password);
+                effettuaAccessoPresenter.mostraSchermataHome();
             }
         });
 

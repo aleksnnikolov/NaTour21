@@ -8,5 +8,12 @@
     <color name="desaturated_green">#FF4d6356</color>
     <color name="light_desaturated_green">#FFd0e9d8</color>
     <color name="blue">#FF3d6472</color>
-    <color name="red">#9e2b2b</color>
+    <color name="blue_light">#abc1c9</color>
+    <color name="blue_lightest">#d8ebf2</color>
+    <color name="red">#d62b2b</color>
+    <color name="cyan">#59c4ac</color>
+    <color name="cyan_light">#dcf7f1</color>
+    <color name="rosè">#d6bba8</color>
+
+    <color name="light_gray">#DDDDDD</color>
 </resources>
