@@ -14,7 +14,7 @@ Note: this is a project made for an university assignment, it has only a didacti
 - A personal profile page
 
 
-## What was used to make this and what I learned
+## What was used to make this
 
 The app is made out of two main parts:
 - Front-end: a native Android app using OSM for map views and interaction
