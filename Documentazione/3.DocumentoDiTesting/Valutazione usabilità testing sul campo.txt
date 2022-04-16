@@ -1,2 +1,0 @@
-Inventati eventuali modifiche e miglioramenti sull'app dopo un potenziale testing sul campo
-- immagina che gli utenti abbiano avuto difficoltà con la selezione degli indirizzi nell'inserimento itinerario -> fix: aggiunto un effetto nella selezione del campo di testo per evidenziare quale indirizzo si sta inserendo

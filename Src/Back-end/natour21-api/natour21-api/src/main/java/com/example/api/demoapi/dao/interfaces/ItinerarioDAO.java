@@ -13,5 +13,6 @@ public interface ItinerarioDAO {
     public Itinerario getDettagliItinerario(String id);
     public EsitoOperazioneResponse nuovoItinerario(Itinerario itinerario);
     public Boolean itinerarioIdDisponibile(String codiceGenerato);
+    public EsitoOperazioneResponse deleteItinerario(String id);
 
 }

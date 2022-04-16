@@ -82,6 +82,10 @@ public class ItinerarioService {
         return esitoOperazione;
     }
 
+    public EsitoOperazioneResponse deleteItinerario(String id) {
+        return itinerarioDAO.deleteItinerario(id);
+    }
+
     private String generaIdItinerario() {
         Random rnd = new Random();
         int numero = rnd.nextInt(99999);

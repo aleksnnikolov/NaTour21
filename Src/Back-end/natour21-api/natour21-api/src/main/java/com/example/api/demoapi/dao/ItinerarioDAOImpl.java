@@ -141,6 +141,18 @@ public class ItinerarioDAOImpl implements ItinerarioDAO {
         }, codiceGenerato);
     }
 
+    public EsitoOperazioneResponse deleteItinerario(String id) {
+        String sql = "DELETE FROM itinerario WHERE itinerario_id = ?";
+
+        try {
+            jdbcTemplate.update(sql, id);
+        } catch (DataAccessException e) {
+            return new EsitoOperazioneResponse("ERROR", e.getMessage());
+        }
+
+        return new EsitoOperazioneResponse("OK");
+    }
+
     private boolean decodificaBooleanHasPercorso(int intero) {
         return intero == 1;
     }

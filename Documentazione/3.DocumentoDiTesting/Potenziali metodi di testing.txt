@@ -1,4 +1,0 @@
-SignUpInputValidator::validaCompilazioneCampi
-Utils::generaDurataItinearario
-Utils-> metodo che genera il tempo trascorso dall'inserimento di un itinerario (whitebox?)
-eventuale metodo che estrae un percorso da un file GPX

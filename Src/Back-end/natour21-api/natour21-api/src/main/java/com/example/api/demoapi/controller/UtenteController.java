@@ -22,6 +22,11 @@ public class UtenteController {
         return utenteService.getDettagliUtente(email);
     }
 
+    @GetMapping(value = "/exists", produces = "application/json")
+    public EsitoOperazioneResponse getEsitoUtenteEsistente(@RequestParam(name = "email") String email, @RequestParam(name = "provider") String provider) {
+        return utenteService.utenteEsistente(email, provider);
+    }
+
     @PostMapping(value = "/", produces = "application/json", consumes = "application/json")
     public EsitoOperazioneResponse creaNuovoUtente(@RequestBody Utente utente) {
         return utenteService.nuovoUtente(utente);

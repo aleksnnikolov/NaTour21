@@ -1,2 +1,0 @@
-- Aggiorna in tutti i punti della documentazione da "itinerari propri" a "miei itinerari"
-- Uniforma tutte le classi nei class diagram

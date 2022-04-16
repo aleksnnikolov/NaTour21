@@ -12,6 +12,10 @@ import org.springframework.stereotype.Repository;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.SQLIntegrityConstraintViolationException;
+
+import static com.example.api.demoapi.dao.responses.EsitoOperazioneResponse.ESITO_OK;
+import static com.example.api.demoapi.dao.responses.EsitoOperazioneResponse.ESITO_ERRORE;
 
 @Repository("utente-mysql")
 public class UtenteDAOImpl implements UtenteDAO {
@@ -46,6 +50,7 @@ public class UtenteDAOImpl implements UtenteDAO {
                 utenteEstratto.setEmail(resultSet.getString("email"));
                 utenteEstratto.setDataCreazioneAccount(resultSet.getTimestamp("data_creazione_account").toLocalDateTime());
                 utenteEstratto.setImmagineProfilo(resultSet.getString("immagine_profilo"));
+                utenteEstratto.setProviderEsterno(resultSet.getString("provider_esterno"));
                 return utenteEstratto;
             }
         }, email);
@@ -66,6 +71,7 @@ public class UtenteDAOImpl implements UtenteDAO {
                 utenteEstratto.setEmail(resultSet.getString("email"));
                 utenteEstratto.setDataCreazioneAccount(resultSet.getTimestamp("data_creazione_account").toLocalDateTime());
                 utenteEstratto.setImmagineProfilo(resultSet.getString("immagine_profilo"));
+                utenteEstratto.setProviderEsterno(resultSet.getString("provider_esterno"));
                 return utenteEstratto;
             }
         }, id);
@@ -74,15 +80,39 @@ public class UtenteDAOImpl implements UtenteDAO {
     }
 
     @Override
+    public EsitoOperazioneResponse utenteEsistente(String email, String provider) {
+        String sql = "SELECT * FROM utente WHERE email = ? AND provider_esterno = ?";
+
+        Boolean utenteEsistente = jdbcTemplate.query(sql, new ResultSetExtractor<Boolean>() {
+            @Override
+            public Boolean extractData(ResultSet rs) throws SQLException, DataAccessException {
+                return rs.isBeforeFirst();
+            }
+        }, email, provider);
+
+        if (Boolean.TRUE.equals(utenteEsistente))
+            return new EsitoOperazioneResponse(ESITO_OK);
+        else
+            return new EsitoOperazioneResponse(ESITO_ERRORE, "non esiste un account con questa mail");
+    }
+
+    @Override
     public EsitoOperazioneResponse nuovoUtente(Utente utente) {
-        String sql = "INSERT INTO utente() VALUES(?, ?, ?, ?, ?);";
+        String sql = "INSERT INTO utente(user_id, nome_utente, email, data_creazione_account, immagine_profilo, provider_esterno) VALUES(?, ?, ?, ?, ?, ?);";
+        try {
         jdbcTemplate.update(sql, utente.getUserID(),
                                  utente.getNomeUtente(),
                                  utente.getEmail(),
                                  utente.getDataCreazioneAccount(),
-                                 utente.getImmagineProfilo());
+                                 utente.getImmagineProfilo(),
+                                 utente.getProviderEsterno());
+        } catch (DataAccessException e) {
+            if (e.getCause() instanceof SQLIntegrityConstraintViolationException) {
+                return new EsitoOperazioneResponse(ESITO_ERRORE, "esiste già un account con questa mail");
+            }
+        }
 
-        return new EsitoOperazioneResponse("OK");
+        return new EsitoOperazioneResponse(ESITO_OK);
     }
 
     @Override

@@ -24,6 +24,10 @@ public class UtenteService {
         return this.utenteDAO.getDettagliUtenteByEmail(email);
     }
 
+    public EsitoOperazioneResponse utenteEsistente(String email, String provider) {
+        return utenteDAO.utenteEsistente(email, provider);
+    }
+
     public EsitoOperazioneResponse nuovoUtente(Utente utente) {
         String userID = generaIdUtente();
 

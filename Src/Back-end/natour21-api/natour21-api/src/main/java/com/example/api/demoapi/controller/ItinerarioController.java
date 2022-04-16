@@ -38,4 +38,9 @@ public class ItinerarioController {
         return itinerarioService.nuovoItinerario(itinerario);
     }
 
+    @DeleteMapping("/{routeID}")
+    public EsitoOperazioneResponse deleteItinerario(@PathVariable String routeID) {
+        return itinerarioService.deleteItinerario(routeID);
+    }
+
 }

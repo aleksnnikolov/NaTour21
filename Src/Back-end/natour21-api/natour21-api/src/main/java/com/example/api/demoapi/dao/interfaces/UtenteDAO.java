@@ -10,6 +10,7 @@ public interface UtenteDAO {
     //public String getIdUtente(String email);
     public Utente getDettagliUtenteByEmail(String email);
     public Utente getDettagliUtenteByID(String id);
+    public EsitoOperazioneResponse utenteEsistente(String email, String provider);
     public EsitoOperazioneResponse nuovoUtente(Utente utente);
     public Boolean userIdDisponibile(String codiceGenerato);
 

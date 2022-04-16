@@ -15,6 +15,7 @@ public class Utente {
     private String nomeUtente;
     private String email;
     private String immagineProfilo;
+    private String providerEsterno;
 
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", shape = JsonFormat.Shape.STRING)
     private LocalDateTime dataCreazioneAccount;
