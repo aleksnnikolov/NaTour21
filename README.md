@@ -1,7 +1,7 @@
 # NaTour21
 A social network for hiking enthusiast
 
-Note: this is a project made for an university assignment, it has only a didactic purpose.
+This is a project made for an university assignment, it has only an academic purpose.
 
 ##Features
 
@@ -16,7 +16,7 @@ Note: this is a project made for an university assignment, it has only a didacti
 
 ## What was used to make this
 
-The app is made out of two main parts:
+The application is made out of two main parts:
 - Front-end: a native Android app using OSM for map views and interaction
 - Back-end: a Rest service made by using Spring Boot 
 
